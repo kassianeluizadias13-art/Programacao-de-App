@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>PRIMEIRA PÁGINA</title>
+
+        <style>
+            body {
+                background-color: rgb(137, 137, 137);
+            }
+
+           img {
+                width: 90px;
+                height: 100px;
+                margin-top: 12px;
+                border-radius: 50%;
+            }
+        </style>
+    </head>
+
+    <body>
+     <h1>definitivamente a primeira página</h1>
+
+     <input type="text" id="nome" placeholder="claramente a primeira página"><br />
+     <input type="color" name="red" id="cor"><br />
+     <input type="date" name="" id=""><br />
+     <input type="password"><br />
+     <input type="file"><br />
+     <input type="radio"><br />
+     <input type="checkbox"><br />
+     <p></p>
+     <img src="https://th.bing.com/th/id/OIP.x5Yg6RsgZ1asKJtOHv0bLwHaHZ?w=203&h=202&c=7&r=0&o=7&pid=1.7&rm=3" alt=""><br />
+     <img src="https://th.bing.com/th/id/OIP.FgBaRoajak7j4c1_jeJFogHaHL?w=205&h=199&c=7&r=0&o=7&pid=1.7&rm=3" alt="">
+
+     <button onclick="clicou()">ENTRAR</button><br />
+    
+     <select name="a" id=""> <option value="">
+        esta é a primeira página
+     </option><s></s></select>
+     <script>
+        //var teste = true
+       // if(teste){
+       //     console.log
+      //  }
+       function clicou(){
+        var nome = document.getElementById("nome").value
+        alert(nome)
+       }
+
+       var seletorCor = document.getElementById("cor")
+       seletorCor.addEventListener("input", function(){
+        document.body.style.backgroundColor = seletorCor.value
+       })
+
+
+     </script>
+    </body>
+
+
+
+</html>
