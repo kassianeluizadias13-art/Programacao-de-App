@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(196, 170, 222);
+    color:rebeccapurple;
+    font-family: Arial, Helvetica, sans-serif;
+  
+
+}
+a{
+    padding: 50px;
+    color: rebeccapurple;
+    text-decoration: none;
+}
+
+button{
+
+    background-color: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* ---------------sidebar---------------- */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 245px;
+    height: 100vh;
+    background-color:rgb(196, 170, 222);
+    border-right: 1px solid rgb(176, 142, 211);
+    /* border-right-width:  1px;
+    border-right-color: blueviolet; */
+}
+
+.logo{
+    padding: 30px;
+    margin-bottom: 40px;
+    font-size: 30px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center ;
+}
+.menu{
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.menu-item{
+    
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 27px 36px 12px;
+    font-size: 10px;
+    transition: 0.5s;
+}
+.menu-item span {
+    
+    font-size: 25px;
+    text-align: center;
+     margin-top: -14px;
+}
+
+.menu-item:hover {
+    background-color: rgb(193, 162, 223);
+}
+
+/* --------------------------------------- */
+
+.content{
+    width: 75px;
+    margin-left: 350px;
+    padding: 50px;
+
+}
+
+.stories{
+    display: flex;
+    flex-direction: row;
+    gap: 18px;
+    margin-bottom: 30px;
+    /* overflow: hidden; */
+}
+.story{
+    width: 95px;
+    text-align: center;
+    font-size: 12px;
+    flex-shrink: 0;
+}
+
+.story img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+    object-fit: cover;
+}
+
+.story-border{
+    width: 98px;
+    height: 98px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border-radius: 50%;
+    background: linear-gradient(
+    45deg,
+    #feda75,
+    #fa7,
+    #d69,
+   
+ 
+
+
+    );
+}
