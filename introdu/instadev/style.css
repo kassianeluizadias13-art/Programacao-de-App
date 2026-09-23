@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: rgb(196, 170, 222);
+    background-color: rgb(204, 182, 226);
     color:rebeccapurple;
     font-family: Arial, Helvetica, sans-serif;
   
@@ -63,20 +63,19 @@ button{
     
     font-size: 25px;
     text-align: center;
-     margin-top: -14px;
+    margin-top: -14px;
 }
 
 .menu-item:hover {
-    background-color: rgb(193, 162, 223);
+    background-color: rgb(186, 154, 217);
 }
 
 /* --------------------------------------- */
 
 .content{
-    width: 75px;
+    width: 750px;
     margin-left: 350px;
     padding: 50px;
-
 }
 
 .stories{
@@ -112,11 +111,89 @@ button{
     background: linear-gradient(
     45deg,
     #feda75,
-    #fa7,
-    #d69,
-   
- 
-
-
+    #fa7e1e,
+    #d62976,
+    #962fbf,
+    #4f5bb5
     );
+}
+ /* ------------------------------------------------ */
+.feed {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 500px;
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.post-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post-user img{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.post-user {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.post-user div {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+}
+
+.post-user span {
+    font-size: 12px;
+    color: rgb(245, 220, 244);
+}
+
+.more {
+    font-size: 18px;
+    background-color: transparent;
+}
+
+.post-image {
+    display: block;
+    width: 100%;
+    height: 670px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid #d9b6d7
+}
+
+.post-actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0px;
+}
+.post-actions button {
+    background-color: transparent;
+    margin-right: 10px;
+    font-size: 27px;
+    color: #572977;
+}
+
+.post-actions:hover {
+    opacity: 0.5;
+}
+.post-info {
+    display: flex;
+    flex-direction: column;
+
+font-size: 14px;
 }
