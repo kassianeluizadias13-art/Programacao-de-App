@@ -197,3 +197,59 @@ button{
 
 font-size: 14px;
 }
+
+/* ---------------------------------- */
+
+.suggestions {
+    position: fixed;
+    top: 45px;
+    right: 50px;
+
+}
+
+.user, .suggestion{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 24px ;
+    gap: 16px;
+}
+.user img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.user div, .suggestion div{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+.user span, .suggestion span {
+    font-size: 20px;
+    color: #c1a3de;
+
+
+}
+.user a, .suggestion user{
+    color: #4f5bb5;
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: 45px;
+}
+.suggestion-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 14px;
+    color: rgb(186, 154, 217);
+    margin-bottom: 24px;
+}
+
+.suggestion img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
