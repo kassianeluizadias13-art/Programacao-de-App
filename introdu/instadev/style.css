@@ -330,3 +330,6 @@ font-size: 14px;
     display: none;
 }
 
+.liked {
+    color: red !important;
+}

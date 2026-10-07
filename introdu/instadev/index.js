@@ -60,19 +60,21 @@
     ]
 
     const feed = document.getElementById("feed");
-    const botaoAbrir = document.getElementById("botaoAbrirModal")
+    const botaoAbrir = document.getElementById("botaoCriarModal")
     const botaoFechar = document.getElementById("botaoFecharModal")
     const modal = document.getElementById("modalPost")
+    const botaoPublicar = document.getElementById("botaoPublicar")
+    const botaoLike = document.getElementById("")
 
     botaoAbrir.addEventListener("click", () => {
-       modal.classList.remove("hidden")
-    })
+        modal.classList.remove("hidden")
+     })
+ 
+     botaoFechar.addEventListener("click", () =>{
+         modal.classList.add("hidden")
+     })
 
-    botaoFechar.addEventListener("click", () =>{
-        modal.classList.add("hidden")
-    })
-
-        function renderPonts() {
+        function renderPosts() {
             feed.innerHTML = ""
             
 
@@ -102,18 +104,15 @@
             <img src="${post.image}" class="post-image" > 
             <div class="post-actions">
                 <div>
-                    <button>♡
-                    </button>
-                    <button>○
-                    </button>
-                    <button>➤
-                    </button>
+                    <button class="${post.isLike === true ? 'liked' : ''}" onclick="curtirPost(${post.id})">♡</button>
+
+                    <button>○</button>
+                    <button>➤</button>
                 </div>
-                <button>▱
-                </button>
+                <button>▱</button>
             </div>
                 <div class="post-info">
-                    <strong>${posts.likes}</strong>
+                    <strong>${post.likes} Curtidas</strong>
                     
                     ${commentsHTML}
                     <a href="#">Ver todos os 5 comentarios</a>
@@ -129,4 +128,61 @@
             feed.appendChild(article)
             }
         }
-        renderPonts()
+
+        renderPosts()
+        // var index = posts.findIndex(post => idPost === post.id)
+        // posts[index].isLike = !posts[index].isLike
+        // posts[index].likes = posts[index].isLike === true ? posts[index].likes + 1 : posts[index].likes
+
+        function curtirPost(idPost){
+            console.log(idPost)
+           for(var i = 0; i < posts.length; i++)
+            if(idPost === posts[i].id){
+                posts[i].isLike = !posts[i].isLike
+                posts[i].likes = posts[i].isLike === true ? posts[i].likes + 1 : posts[i].likes
+                renderPosts()
+                return
+            }
+           
+        }
+
+        botaoPublicar.addEventListener("click", () =>{
+            // pegar informaçoes solicitadas pelo usuario
+            var URLimagem = document.getElementById("imgPost").value
+            var legenda = document.getElementById("legendPost").value
+            // gerar a estrutura
+           
+            var novoPost = {
+                id: posts[posts.length - 1].id + 1,
+                user: {
+                    nickname: "kassy",
+                    local: "Itajai - SC",
+                    userImg: 'https://github.com/kassianeluizadias13-art.png'
+                },
+                image: URLimagem,
+                legend: legenda,
+                likes: 0,
+                isLike: false,
+                data: new Date().toISOString(),
+                comments: []            
+            }
+            //adicionando a listagens de posts
+            
+            //re-enderizar a tela
+            renderPosts()
+    
+    
+            modal.classList.add("hidden")
+    
+            document.getElementById("imgPost").value = ""
+            document.getElementById("legendPost").value = ""
+        })
+    
+        botaoAbrir.addEventListener("click", () => {
+           modal.classList.remove("hidden")
+        })
+    
+        botaoFechar.addEventListener("click", () =>{
+            modal.classList.add("hidden")
+        })
+    
